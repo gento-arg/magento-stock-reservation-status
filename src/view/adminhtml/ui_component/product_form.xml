@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @author    Manuel Cánepa <manuel@gento.com.ar>
+* @copyright GENTo 2023 Todos los derechos reservados
+*/
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="salable_quantity">
+        <insertListing name="gento_stockreservationstatus_product_reservation_listing">
+            <settings>
+                <dataLinks>
+                    <exports>false</exports>
+                    <imports>true</imports>
+                </dataLinks>
+                <externalProvider>gento_stockreservationstatus_product_reservation_listing.gento_stockreservationstatus_product_reservation_listing_data_source</externalProvider>
+                <loading>false</loading>
+                <autoRender>true</autoRender>
+                <ns>gento_stockreservationstatus_product_reservation_listing</ns>
+                <imports>
+                    <link name="product_sku">${ $.provider }:data.product.sku</link>
+                </imports>
+                <exports>
+                    <link name="product_sku">${ $.externalProvider }:params.sku</link>
+                </exports>
+            </settings>
+        </insertListing>
+    </fieldset>
+</form>

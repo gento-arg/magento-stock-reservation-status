@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @author    Manuel Cánepa <manuel@gento.com.ar>
+* @copyright GENTo 2023 Todos los derechos reservados
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="gento_stockreservationstatus_product_reservation_listing_data_source"
+                      xsi:type="string">Gento\StockReservationStatus\Model\ResourceModel\Reservation\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Gento\StockReservationStatus\Model\ResourceModel\Reservation\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">inventory_reservation</argument>
+        </arguments>
+    </type>
+</config>
