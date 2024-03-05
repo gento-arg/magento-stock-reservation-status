@@ -4,7 +4,7 @@
     "type": "magento2-module",
     "version": "1.0.0",
     "require": {
-        "php": "~7.4.0||~8.1.0",
+        "php": "~7.4||~8.1||~8.2",
         "magento/framework": "*.*",
         "magento/module-backend": "*",
         "magento/module-inventory-sales-admin-ui": "*",
